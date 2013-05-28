@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html lang="en-US" class="fade">
+<!-- 
+  ^ You can control a few things with the <html> element's classes:
+
+  "fade"      - smooth fade between slides
+  "nonumbers" - remove the slide numbering after the progress bar
+-->
+
+<head>
+  <title>Firefox OS - User experience & design guidelines</title>
+  <!-- 
+    ^ Don't forget a good title - they show up as bookmarks and in Google 
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1274, user-scalable=no">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+    /* Add your own styles here */
+    .byline {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>Firefox OS - User experience & design guidelines</h1>
+    <p class="footer">Olav Nymoen <a href="mailto:olav@comoyo.com">olav@comoyo.com</a></p>
+  </header>
+
+<!-- 
+  The following is a slide, it needs a class of "slide" and it doesn't 
+  hurt to keep the right semantic elements in there, too.
+  IMPORTANT: each slide needs its own unique ID - this will become its
+  URL and this is how this slide system works!
+-->
+
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+        <h2>User experience & design guidelines</h2>
+      </header>
+      <ul>
+        <li>Websites vs WebApps</li>
+        <li>FFOS Design guidelines</li>
+        <li>Getting started</li>
+      </ul>
+      <small class="byline">
+        Olav Nymoen, Comoyo
+      </small>
+    <footer class="notes">
+I'll be taking about how webapps give the user a complete new user experience.
+About a few design guidelines outlined by Mozilla for FFOS
+and a few pointers on where to look and how to get started on designing apps for FFOS
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webapp" class="slide"><div>
+    <section>
+      <header>
+        <h2>Websites vs WebApps</h2>
+      </header>
+      <img src="images/first_webpage.png" width="300" class="left"
+           alt="Red panda (Firefox)">
+      <img src="images/dialer.png" width="300" class="right"/>
+      <footer class="notes">
+As said many times already. It's all web technologies in the end. Yet, from an end users point of view using webapps is a complete new experience on the web.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webapp_experience" class="slide"><div>
+    <section>
+      <header>
+        <h2>The user experience of WebApps</h2>
+      </header>
+      <img src="images/marketplace.png" width="300" class="left"
+           alt="Red panda (Firefox)">
+      <img src="images/marketplace_install.png" width="300" class="right"/> 
+      <footer class="notes">
+Instead of googling or remembering urls, the user can discover the website, or webapp, in a marketplace.
+The user then installs the website. Even seamlessly paying for it if it costs money.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="homescreen" class="slide"><div>
+    <section>
+      <header>
+        <h2>The user experience of WebApps</h2>
+      </header>
+      <img src="images/homescreen.png" width="300" class="left"/>
+      <img src="images/soundcloud.png" width="300" class="right"/> 
+      <footer class="notes">
+The website can then be launched when needed from the homescreen.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webactivities" class="slide"><div>
+    <section>
+      <header>
+        <h2>The user experience of webapps</h2>
+      </header>
+      <img src="images/webactivities.png" width="250" class="middle"/>
+      <footer class="notes">
+The website can even delegate and subscribe to tasks going on on the device. Just like android intents.
+In fact, the entire experience for someone who doesn't know anything about the underlying technology is just like the experience on traditional smartphones.
+People seem to prefer interacting with apps over websites on mobile, so this gives the possibility for websites to provide the exact same user experience.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="no_net" class="slide"><div>
+    <section>
+      <header>
+        <h2>Gracefully handle connectivity</h2>
+      </header>
+      <img src="images/soundcloud_no_internet.png" width="250" class="middle"/>
+      <footer class="notes">
+Of course, even tho it's possible to give the user experience of an app doesn't mean it happens just because you install the website, rather than visiting it.
+One such major hurdle is that unlike app developers, web developers assume the user has internet connectivity. Apps running on Firefox OS should really make an effort to handle connectivity gracefully.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="guidelines" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>Design guidelines</h2>
+      </header>
+      <footer class="notes">
+Mozilla has come up with a few guidelines that they follow in their core apps.
+      </footer>
+    </section>
+  </div></div> 
+
+  <div id="header_nav" class="slide"><div>
+    <section>
+      <header>
+        <h2>Left and right header navigation</h2>
+      </header>
+      <video autoplay loop src="videos/cancel_confirm.mp4" width="400" class="middle"></video>
+      <footer class="notes">
+Like the iPhone, the Firefox phone only has one button - a home button. Back navigation, cancel button and other "negative" buttons belong in the top left corner.
+"Positive" buttons that confirms, saves or take you further into the app belongs in the top right corner.
+App specific actions then have room on the lower toolbar.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="drawers" class="slide"><div>
+    <section>
+      <header>
+        <h2>Left and right layered drawers</h2>
+      </header>
+      <video loop autoplay src="videos/left_drawer.mp4" width="300" class="left" ></video>
+      <video loop autoplay src="videos/right_drawer.mp4" width="300" class="right"></video>
+      <footer class="notes">
+Many of the applications have layered content revealed though drawers.
+Similar to the buttons, the convention here is that drawers that doesn't move you further into the app, like the calendar settings here, are on the left side, while drawers that take you further into the app belong on the right side. In this example the browser tabs are accessed though drawer on the right side.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="color" class="slide"><div>
+    <section>
+      <header>
+        <h2>Productivity apps vs media apps</h2>
+      </header>
+      <img src="images/guideline_productivity.png" width="300" class="left" />
+      <img src="images/guideline_media.png" width="300" class="right" />
+      <footer class="notes">
+The core apps that ships with the device are split into two categories. Productivity and Media. Productivity apps are effective, bright and easy to use. The iPhone was my first smartphone and it used a lot of skeuomorphs, or design analogies to quickly teach the user how to use an iPhone. The Firefox Phone will be the first smartphone for a lot of it's users and the productivity apps relies on a skeuomorphic design to quickly get it's users up to speed.
+The design of the media apps is a little more brave. They follow a dark color scheme, removes chrome and push the media content to the front.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="getting_started" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>Getting started</h2>
+      </header>
+      <footer class="notes">
+The core apps follow these guidelines and visual expression, but apps in general are free to chose which, if any of them, to follow. If you choose to let your app blend in with the experience the core apps provide here are a few pointers on how to get started.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="header_example" class="slide"><div>
+    <section>
+      <header>
+        <h2>Header example</h2>
+      </header>
+
+      <pre>
+        <code>@import url(resources/headers.css);</code>
+      </pre>
+
+      <pre>
+        <code>&lt;section role="region"&gt;</code>
+        <code>  &lt;header&gt;</code>
+        <code>    &lt;menu type=&quot;toolbar&quot;&gt;</code>
+        <code>      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;icon icon-edit&quot;&gt;edit&lt;/span&gt;&lt;/a&gt;</code>
+        <code>      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;icon icon-add&quot;&gt;add&lt;/span&gt;&lt;/a&gt;</code>
+        <code>    &lt;/menu&gt;</code>
+        <code>    &lt;h1&gt;Messages&lt;/h1&gt;</code>
+        <code>  &lt;/header&gt;</code>
+        <code>&lt;/section&gt;</code>
+      </pre>
+      <footer class="notes">
+This snippet is copied directly from the building blocks. The building blocks are the design elements that the core apps are build with and they are located in a restricted area of the phone.
+The recommended way of using these building blocks is including a copy of them in your app.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="header_example_vid" class="slide"><div>
+    <section>
+      <header>
+        <h2>Header example</h2>
+      </header>
+      <video autoplay loop src="videos/header.mp4" class="middle" width="400"></video>
+      <footer class="notes">
+The snippet will produce the topmost header here, with all interaction states. The other headers are also made equally simple.
+      </footer>
+    </section>
+  </div></div>
+
+  
+
+  <div id="collage" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Tons of pre made building blocks</h2>
+      </header>
+      <img src="images/collage.png" /> 
+      <footer class="notes">
+Since all the core apps are build with these building blocks there are a lot of them. All equally simple to reuse in apps.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="resources" class="slide"><div>
+    <section>
+      <header>
+        <h2>Resources</h2>
+      </header>
+      <ul>
+        <li>Examples
+          <ul>
+            <li>developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/UX</li>
+            <li>buildingfirefoxos.com</li>
+          </ul>
+        </li>
+        <li>Code
+          <ul>
+            <li>github.com/mozilla-b2g/gaia/tree/master/shared</li>
+            <li>github.com/comoyo/gaia-shared</li>
+          </ul>
+        </li>
+        <li>Styleguide
+          <ul>
+            <li>mozilla.org/en-US/styleguide</li>
+          </ul>
+        </li>
+      </ul>
+      <footer class="notes">
+The above code was found on mozillas official UX pages. They have step by step guides for most design elements.
+An unofficial resource made by Telefonica that have contributed a lot to the OS is the buildingfirefoxos site. In includes nice demonstrations and even a few elements that still aren't set in stone and thus not included on the official pages yet, like app navigation transition.
+
+To fetch a copy of the building blocks you can fish it out of the official gaia repo or clone a copy from the comoyo repo.
+
+Lastly, the general design guidelines for Mozilla contains some extra info on color schemes and app icons.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="sum_up" class="slide"><div>
+    <section>
+      <header>
+        <h2>To sum it up ..</h2>
+      </header>
+      <ul>
+        <li>WebAPIs brings the <strong>App experience</strong> to the <strong>web</strong></li>
+        <li>Live up to expectations by following <strong>guidelines and best practices</strong></li>
+        <li>If you're prototyping apps in <strong>HTML and css</strong>, you're already <strong>making WebApps</strong></li>
+      </ul>
+      <footer class="notes">
+The above code was found on mozillas official UX pages. They have step by step guides for most design elements.
+An unofficial resource made by Telefonica that have contributed a lot to the OS is the buildingfirefoxos site. In includes nice demonstrations and even a few elements that still aren't set in stone and thus not included on the official pages yet, like app navigation transition.
+
+To fetch a copy of the building blocks you can fish it out of the official gaia repo or clone a copy from the comoyo repo.
+
+Lastly, the general design guidelines for Mozilla contains some extra info on color schemes and app icons.
+      </footer>
+    </section>
+  </div></div>
+
+  <!--<div id="shout" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>Enough with the cute!</h2>
+      </header>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="quote" class="slide"><div>
+    <section>
+      <header>
+        <h2>Quote example</h2>
+      </header>
+      <blockquote>
+        <p>
+          The main problem with quotes on the world wide web is that you 
+          can never be sure that they have been properly attributed.
+        </p>
+        <p class="quotesource">Benjamin Franklin</p>      
+      </blockquote>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="code" class="slide"><div>
+    <section>
+      <header>
+        <h2>Code example</h2>
+      </header>
+      <pre>
+        <code>&lt;html lang="en"&gt;</code>
+        <code><mark>&lt;head&gt;</mark></code>
+        <code>  &lt;title&gt;Shower&lt;/title&gt;</code>
+        <code>  &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+        <code>  &lt;link rel="stylesheet" href="s/screen.css"&gt;</code>
+        <code>  &lt;script src="j/jquery.js"&gt;&lt;/script&gt;</code>
+        <code class="comment">  &lt;-- ^ only if you really need to --&gt;</code>
+        <code><mark>&lt;/head&gt;</mark></code>
+      </pre>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="centeredimage" class="slide"><div>
+    <section>
+      <header>
+        <h2>Centered image</h2>
+      </header>
+      <img src="pictures/mozillaoverview/redpanda.jpg" class="middle"
+           alt="Red panda (Firefox)">
+      <small class="credits">
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">
+          Photo by Yortw
+        </a>
+      </small>      
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="leftimage" class="slide"><div>
+    <section>
+      <header>
+        <h2>Left image</h2>
+      </header>
+      <img src="pictures/mozillaoverview/redpanda.jpg" class="left"
+           alt="Red panda (Firefox)">
+      <p>Oh, hai, I am not shiny but very cute!</p>
+      <small class="credits">
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">
+          Photo by Yortw
+        </a>
+      </small>      
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+    <div id="rightimage" class="slide"><div>
+    <section>
+      <header>
+        <h2>Right image</h2>
+      </header>
+      <img src="pictures/mozillaoverview/redpanda.jpg" class="right"
+           alt="Red panda (Firefox)">
+      <p>Oh, hai, I am not shiny but very cute!</p>
+      <small class="credits">
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">
+          Photo by Yortw
+        </a>
+      </small>      
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="imageshadow" class="slide"><div>
+    <section>
+      <header>
+        <h2>Image with shadow</h2>
+      </header>
+      <img src="pictures/mozillaoverview/redpanda.jpg" class="shadow right"
+           alt="Red panda (Firefox)">
+      <p>Oh, hai, I am not shiny but very cute!</p>
+      <small class="credits">
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">
+          Photo by Yortw
+        </a>
+      </small>      
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="imageframe" class="slide"><div>
+    <section>
+      <header>
+        <h2>Image with frame</h2>
+      </header>
+      <figure class="shadow right frame">
+        <img src="pictures/mozillaoverview/redpanda.jpg" class="right"
+             alt="Red panda (Firefox)">
+      </figure>
+      <p>Oh, hai, I am not shiny but very cute!</p>
+      <small class="credits">
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">
+          Photo by Yortw
+        </a>
+      </small>      
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="dangling" class="slide"><div>
+    <section>
+      <header>
+        <h2>Image with swinging frame</h2>
+      </header>
+      <figure class="shadow middle frame swing">
+        <img src="pictures/mozillaoverview/redpanda.jpg" 
+             alt="Red panda (Firefox)">
+      </figure>
+      <small class="credits">
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">
+          Photo by Yortw
+        </a>
+      </small>      
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="coverh" class="slide cover h"><div>
+    <section>
+      <header>
+        <h2>Full screen image height-adjusted</h2>
+      </header>
+        <img src="pictures/mozillaoverview/otoro.jpg" 
+             alt="Firefox OS">
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="coverw" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Full screen image width-adjusted</h2>
+      </header>
+        <img src="pictures/mozillaoverview/otoro.jpg" 
+             alt="Firefox OS">
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="thanks" class="slide"><div>
+    <section>
+      <header>
+        <h2>Thanks</h2>
+      </header>
+        <figure class="frame middle swing">
+        <img src="pictures/mozillaoverview/redpanda.jpg" 
+             alt="Red panda (Firefox)">
+        </figure>
+      <ul class="oneline demourl">
+        <li>{name}</li>
+        <li><a href="http://twitter.com/">{twitter}</a></li>
+        <li><a href="{slideurl}">
+          {slideurl}
+        </a></li>
+      </ul>
+      <small class="credits">
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">
+          Photo by Yortw
+        </a>
+      </small>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>-->
+
+  <!--<div class="progress"><div></div></div>-->
+  <!-- 
+    ^ don't like a progress bar? just delete this DIV
+  -->
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>

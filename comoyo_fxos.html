@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="en-US" class="fade">
+<!--
+  ^ You can control a few things with the <html> element's classes:
+
+  "fade"      - smooth fade between slides
+  "nonumbers" - remove the slide numbering after the progress bar
+-->
+
+<head>
+  <title>Firefox OS - Making apps & design guidelines</title>
+  <!--
+    ^ Don't forget a good title - they show up as bookmarks and in Google
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1274, user-scalable=no">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+    /* Add your own styles here */
+    .byline {
+      font-size: 30px;
+    }
+
+    .container {
+      position:relative;
+    }
+    .box {
+      width: 500px;
+      padding:10px;
+      margin: 10px;
+      text-align:center;
+    }
+    #certified {
+      background-color:rgba(255,0,0,0.5);
+    }
+    #priviledged {
+      background-color:rgba(255,255,0,0.5);
+    }
+    #web {
+      background-color:rgba(0,255,0,0.5);
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>Making apps for an open web device</h1>
+    <p class="footer">Olav Nymoen <a href="mailto:olav@comoyo.com">olav@comoyo.com</a></p>
+  </header>
+
+<!--
+  The following is a slide, it needs a class of "slide" and it doesn't
+  hurt to keep the right semantic elements in there, too.
+  IMPORTANT: each slide needs its own unique ID - this will become its
+  URL and this is how this slide system works!
+-->
+
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+        <h2>Making apps for Firefox OS</h2>
+      </header>
+      <ul>
+        <li>Comoyo and Firefox OS</li>
+        <li>Building an app</li>
+        <li>Design guidelines</li>
+      </ul>
+      <small class="byline">
+        Olav Nymoen, Comoyo
+      </small>
+    <footer class="notes">
+Olav
+My talk
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="comoyo_montage" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+
+      <img src="pictures/comoyo_montage.png">
+      <footer class="notes">
+Whenever something was impossible to do with webtechnologies, mozilla extended the browser - Making it possible.
+      </footer>
+    </section>
+  </div></div>
+
+    <div id="web_ecosystem" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Web is the best ecosystem</h2>
+      </header>
+      <img src="appimg/native_apps.jpg"/>
+      <footer class="notes">
+Noone controls the web. When someone (like Mozilla) has an idea, they implement it as a prototype and propose it for standardization
+If the prototype becomes popular, the browser vendors and others collaborate on a standard that everyone can implement
+webRTC is a complex beast that makes it possible for browsers to communicate directly. Google prototyped and proposed it. Others are now implementing it.
+If someone doesn't like the proposal, like how Microsoft is afraid of webGL, they can either unwillingly implement it or have a browser that is worse than the rest.
+This is innovation on the web. Everyone innovating and everyone collaborating. That is what the webAPIs are all about. Moving the web to mobile.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="b2g" class="slide"><div>
+    <section>
+      <header>
+        <h2>Bringing the web to mobile</h2>
+      </header>
+      <img src="appimg/boot2gecko.png" class="right"/>
+      Mozilla is extending the web with new technologies, giving it the ability to take full advantage of a mobile device.
+      <footer class="notes">
+Might be hard to imagine this web phone competing with native mobile apps, but think about the desktop.
+Before I only read newspapers and checked the weather on the web.
+Today I read all my email, write all my documents and even watch TV in the browser.
+Today the browser is the best development environment on desktop for nearly every type of application and why should mobile be any different?
+
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webapi" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+      <img src="appimg/webapi.png" class="right" />
+      <footer class="notes">
+We brought a bunch og geekphones up here yesterday - flashed with the latest build and it has improved a lot just in the last month. Next month it's going to be better, and then even better .. Some day it'll catch up and beat the native stuff.
+Join in with a utility! Developer preview phones to the brave and curious!
+      </footer>
+    </section>
+  </div></div>
+
+
+
+  <div id="just_html" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>Building an app for Firefox OS</h2>
+      </header>
+    </section>
+  </div></div>
+
+  <div id="develop_tools" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+
+      <video autoplay loop src="videos/aurora_debug.mp4" />
+
+    </section>
+  </div></div>
+
+  <div id="marketplace" class="slide"><div>
+    <section>
+      <header>
+        <h2>Distribute through a marketplace</h2>
+      </header>
+      <img src="images/marketplace.png" width="300" class="left"
+           alt="Red panda (Firefox)">
+      <img src="images/marketplace_install.png" width="300" class="right"/>
+      <footer class="notes">
+Instead of googling or remembering urls, the user can discover the website, or webapp, in a marketplace.
+The user then installs the website. Even seamlessly paying for it if it costs money.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="security" class="slide"><div>
+    <section>
+      <header>
+        <h2>Security</h2>
+      </header>
+      <div class="container">
+        <div class="box" id="web">Web app</div>
+        <div class="box" id="priviledged">Priviledged app</div>
+        <div class="box" id="certified">Certified app</div>
+      </div>
+
+      <footer class="notes">
+This is how the innovation happens on the web. Google decides what goes into Andoird, Apple on iOS. The web is different.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webactivities" class="slide"><div>
+    <section>
+      <header>
+        <h2>Delegate security risks</h2>
+      </header>
+      <img src="pictures/webactivities.png" width="250" class="middle"/>
+      <footer class="notes">
+The website can even delegate and subscribe to tasks going on on the device. Just like android intents.
+In fact, the entire experience for someone who doesn't know anything about the underlying technology is just like the experience on traditional smartphones.
+People seem to prefer interacting with apps over websites on mobile, so this gives the possibility for websites to provide the exact same user experience.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="ffos_list_detail" class="slide"><div>
+    <section>
+      <header>
+        <h2>Comoyo starter app</h2>
+      </header>
+      <img src="appimg/comoyo.png" class="left" width="200" />
+      <img src="appimg/angular.png" class="middle" width="350" />
+      <img src="appimg/html5.png" class="right" width="200" />
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="ffos_list_detail_intructions" class="slide"><div>
+    <section>
+      <header>
+        <h2>Node.js, git and 5 lines</h2>
+      </header>
+      <pre>
+        <code>git clone https://github.com/comoyo/ffos-list-detail</code>
+        <code>cd ffos-list-detail</code>
+        <code>git submodule update --init --recursive</code>
+        <code>npm install</code>
+        <code>node server.js # Server running at 0.0.0.0:8081</code>
+      </pre>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="ffos_list_detail_video" class="slide"><div>
+    <section>
+      <video height="500" src="appvideos/ffos-app.mp4" autoplay loop class="middle" />
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="guidelines" class="slide"><div>
+    <section>
+      <header>
+        <h2>App guidelines</h2>
+      </header>
+      <img src="images/guideline_productivity.png" width="300" class="left" />
+      <img src="images/guideline_media.png" width="300" class="right" />
+      <footer class="notes">
+The core apps that ships with the device are split into two categories. Productivity and Media. Productivity apps are effective, bright and easy to use. The iPhone was my first smartphone and it used a lot of skeuomorphs, or design analogies to quickly teach the user how to use an iPhone. The Firefox Phone will be the first smartphone for a lot of it's users and the productivity apps relies on a skeuomorphic design to quickly get it's users up to speed.
+The design of the media apps is a little more brave. They follow a dark color scheme, removes chrome and push the media content to the front.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="header_nav" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS navigation conventions</h2>
+      </header>
+      <video autoplay loop src="videos/cancel_confirm.mp4" width="400" class="middle"></video>
+      <footer class="notes">
+Like the iPhone, the Firefox phone only has one button - a home button. Back navigation, cancel button and other "negative" buttons belong in the top left corner.
+"Positive" buttons that confirms, saves or take you further into the app belongs in the top right corner.
+App specific actions then have room on the lower toolbar.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="collage" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>buildingfirefoxos.com</h2>
+      </header>
+      <img src="images/collage.png" />
+      <footer class="notes">
+Since all the core apps are build with these building blocks there are a lot of them. All equally simple to reuse in apps.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="offline" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Gap in best practices: offline</h2>
+      </header>
+      <img src="appimg/offline_gap.jpg" class="middle" />
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="offline_tools" class="slide"><div>
+    <section>
+      <header>
+        <h2>Offline toolbelt</h2>
+      </header>
+      <ul>
+        <li>localStorage</li>
+        <li>indexedDb</li>
+        <li>appcache</li>
+        <li>packaged apps (Part of webApps API)</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="appcache" class="slide"><div>
+    <section>
+      <pre>
+        <code>&lt;html manifest="example.appcache"&gt;</code>
+      </pre>
+      <pre>
+        <code>CACHE MANIFEST</code>
+        <code># 2010-06-18:v2</code>
+        <code>CACHE:</code>
+        <code>index.html</code>
+        <code>scripts/main.js</code>
+        <code>NETWORK:</code>
+        <code>/myapi</code>
+        <code>FALLBACK:</code>
+        <code>*.html /offline.html</code>
+      </pre>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="package" class="slide"><div>
+    <section>
+      <header>
+        <h2>Packaging webapps</h2>
+      </header>
+      <ol>
+        <li>Zip the resources (including the manifest.webapp)</li>
+        <li>Create an external mini-manifest called package.webapp</li>
+        <li>Install the app with navigator.mozApps.installPackage(url-to-mini-manifest)</li>
+      </ol>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <!--<div class="progress"><div></div></div>-->
+  <!--
+    ^ don't like a progress bar? just delete this DIV
+  -->
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>

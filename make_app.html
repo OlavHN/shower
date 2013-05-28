@@ -1,0 +1,493 @@
+<!DOCTYPE HTML>
+<html lang="en-US" class="fade">
+<!-- 
+  ^ You can control a few things with the <html> element's classes:
+
+  "fade"      - smooth fade between slides
+  "nonumbers" - remove the slide numbering after the progress bar
+-->
+
+<head>
+  <title>Firefox OS - User experience & design guidelines</title>
+  <!-- 
+    ^ Don't forget a good title - they show up as bookmarks and in Google 
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1274, user-scalable=no">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+    /* Add your own styles here */
+    .byline {
+      font-size: 30px;
+    }
+
+    .container {
+      position:relative;
+    }
+    .circle {
+      width: 200px;
+      height: 130px;
+      border-radius: 100px;
+      text-align: center;
+      padding-top: 70px;
+      position:absolute;
+    }
+    #certified {
+      top: -120px;
+      background-color:rgba(255,0,0,0.5);
+    }
+    #priviledged {
+      left:-60px;
+      background-color:rgba(255,255,0,0.5);
+    }
+    #web {
+      left:60px;
+      background-color:rgba(0,255,0,0.5);
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>Firefox OS - What, why and how</h1>
+    <p class="footer">Olav Nymoen <a href="mailto:olav@comoyo.com">olav@comoyo.com</a></p>
+  </header>
+
+<!-- 
+  The following is a slide, it needs a class of "slide" and it doesn't 
+  hurt to keep the right semantic elements in there, too.
+  IMPORTANT: each slide needs its own unique ID - this will become its
+  URL and this is how this slide system works!
+-->
+
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+        <h2>Making apps for Firefox OS</h2>
+      </header>
+      <ul>
+        <li>Current status of web on mobile</li>
+        <li>How to make webApps</li>
+        <li>Gracefully handle connectivity</li>
+      </ul>
+      <small class="byline">
+        Olav Nymoen, Comoyo
+      </small>
+    <footer class="notes">
+Olav
+My talk
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="mobile_today" class="slide"><div>
+    <section>
+      <header>
+        <h2>Web on mobile today</h2>
+      </header>
+      
+      <img src="appimg/mobile_web.jpg" class="right">
+      <ul>
+        <li>It's not like desktop</li>
+        <li>But neither was once desktop</li>
+      </ul>
+      <footer class="notes">
+Whenever something was impossible to do with webtechnologies, mozilla extended the browser - Making it possible.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="responsive" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Mobile today - Responsive webdesign</h2>
+      </header>
+      <img src="appimg/responsive.jpg" />
+      <footer class="notes">
+Not hosted, just built with web technologies. The same you use to build websites. HTML, CSS, javascript.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="sensors" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mobile today - Sensors</h2>
+      </header>
+      
+      <img src="appimg/sensors.jpg" class="right"/>
+      <p>Device has sensors, but browser used as a miniature desktop browser</p> 
+      <footer class="notes">
+  - Gonk, the linux kernel
+  - Gecko, the same old browser
+  - Gaia, the website phone
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="online" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mobile today - online</h2>
+      </header>
+      <img src="appimg/wifi.png" class="right" height="400"/>
+      Web developers assume their users have internet, mobile users does not necessarily have or use internet
+      <footer class="notes">
+APIs for offline, telephony, payment, applications and a security model
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webkit" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mobile today - webkit</h2>
+      </header>
+      A mobile Web or a mobile webkit?
+      <img src="appimg/webkit.png" class="middle" width="800"/>
+      <footer class="notes">
+Why go through with all this trouble of making Firefox OS when we have iPhones and androids?
+      </footer>
+    </section>
+  </div></div> 
+
+  <div id="native" class="slide"><div>
+    <section>
+      <header>
+        <h2>Native apps solves it all</h2>
+      </header>
+      <img src="appimg/facebook_native.png" height="400" class="right"/>
+      <ul>
+        <li>Clear UI guidelines</li>
+        <li>Well defined access to hardware</li>
+        <li>Best practices handles connectivity</li>
+      </ul>
+      <footer class="notes">
+This is how the innovation happens on the web. Google decides what goes into Andoird, Apple on iOS. The web is different.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="native_not" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Languages, frameworks & UX</h2>
+      </header>
+      <img src="appimg/native_apps.jpg"/>
+      <footer class="notes">
+Noone controls the web. When someone (like Mozilla) has an idea, they implement it as a prototype and propose it for standardization
+If the prototype becomes popular, the browser vendors and others collaborate on a standard that everyone can implement
+webRTC is a complex beast that makes it possible for browsers to communicate directly. Google prototyped and proposed it. Others are now implementing it.
+If someone doesn't like the proposal, like how Microsoft is afraid of webGL, they can either unwillingly implement it or have a browser that is worse than the rest.
+This is innovation on the web. Everyone innovating and everyone collaborating. That is what the webAPIs are all about. Moving the web to mobile.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="phonegap" class="slide cover h"><div>
+    <section>
+      <header>
+      </header>
+      <img src="appimg/phonegap.png"/>
+      <footer class="notes">
+Of course, while this sounds great and idealistic in theory, how is this actually going to happen?
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="phonegap_not" class="slide"><div>
+    <section>
+      <header>
+        <h2>Turtles all the way</h2>
+      </header>
+      <img src="appimg/turtles.png" height="500" class="right" />
+      <p>
+        A webapp built on shims built on webviews built in native app wrappers built on operating systems ..
+      </p>
+      <footer class="notes">
+There is something called the Ubuntu Phone. A brand new phone that builds on ubuntu and competes with high end Andoird and iPhone. Sexy stuff, but iPhone sexy?
+Mozilla realizes Apple has a few years on them, so initialy they target the two billion people that is using fragmented, broken andoirds, feature phones or no phone at all today.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webstack" class="slide cover h"><div>
+    <section>
+      <header>
+      </header>
+      <img src="appimg/mozilla_bridge.png"/>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="smartphonesite" class="slide"><div>
+    <section>
+      <header>
+        <h2>Making a smartphone and extending the browser</h2>
+      </header>
+      <img src="appimg/boot2gecko.png" class="right"/>
+      Mozilla is building a smartphone using web technologies, and whenever something is impossible they extend the browser - making it possible.
+      <footer class="notes">
+Might be hard to imagine this web phone competing with native mobile apps, but think about the desktop.
+Before I only read newspapers and checked the weather on the web.
+Today I read all my email, write all my documents and even watch TV in the browser.
+Today the browser is the best development environment on desktop for nearly every type of application and why should mobile be any different?
+
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webapi" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>.. With Standardized Extensions</h2>
+      </header>
+      <img src="appimg/webapi.png" class="right" />
+      <footer class="notes">
+We brought a bunch og geekphones up here yesterday - flashed with the latest build and it has improved a lot just in the last month. Next month it's going to be better, and then even better .. Some day it'll catch up and beat the native stuff.
+Join in with a utility! Developer preview phones to the brave and curious!
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="started" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>Getting started with webapps</h2>
+      </header>
+      <!--<img src="introimg/jan.jpg" height="400" class="right" />-->
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="ffos_list_detail" class="slide"><div>
+    <section>
+      <header>
+        <h2>Comoyo starter app</h2>
+      </header>
+      <img src="appimg/comoyo.png" class="left" width="200" />
+      <img src="appimg/angular.png" class="middle" width="350" />
+      <img src="appimg/html5.png" class="right" width="200" />
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="ffos_list_detail_intructions" class="slide"><div>
+    <section>
+      <header>
+        <h2>Node.js, git and 5 lines</h2>
+      </header>
+      <pre>
+        <code>git clone https://github.com/comoyo/ffos-list-detail</code>
+        <code>cd ffos-list-detail</code>
+        <code>git submodule update --init --recursive</code>
+        <code>npm install</code>
+        <code>node server.js # Server running at 0.0.0.0:8081</code>
+      </pre>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="ffos_list_detail_video" class="slide"><div>
+    <section>
+      <video height="500" src="appvideos/ffos-app.mp4" autoplay loop class="middle" />
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="dev_env" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Development environment</h2>
+      </header>
+      <img src="appimg/dev_env.png" />
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="dev_webapi" class="slide"><div>
+    <section>
+      <header>
+        <h2>Developing with fancy webAPIs</h2>
+      </header>
+      <ul>
+        <li>Mock FF Nightly
+          <ul><li>github.com/KevinGrandon/Firefox-OS-Runtime</li></ul>
+        </li>
+        <li>Firefox OS Simulator
+          <ul><li>hacks.mozilla.org/2013/03/firefox-os-simulator-previewing-version-3-0</li></ul>
+        </li>
+        <li>A real device</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="ffos_simulator" class="slide cover h"><div>
+    <section>
+      <header>
+      </header>
+      <video src="appvideos/simulator.mp4" autoplay loop class="middle" />
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webapi_boilerplate" class="slide"><div>
+    <section>
+      <header>
+        <h2>WebAPI boilerplate app</h2>
+      </header>
+      <img src="appimg/boilerplateapp.png" height="500" class="right"/>
+      <ul>
+        <li>Great introduction to webAPIs</li>
+        <li>github.com/robnyman/Firefox-OS-Boilerplate-App</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="manifest" class="slide"><div>
+    <section>
+      <pre>
+        <code>{ "name": "My app",</code>
+        <code>  "description": "Learning about manifest.webapp",</code>
+        <code>  "launch_path": "/",</code>
+        <code>  "icons": { "img/icon.png" },</code>
+        <code>  "default_locale": "no",</code>
+        <code>  "permissions": {</code>
+        <code>    "contacts": {</code>
+        <code>      "description": "Required for autocompletion",</code>
+        <code>      "access": "readcreate"</code>
+        <code>    }</code>
+        <code>  },</code>
+        <code>  "type": "privileged" }</code>
+      </pre>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="security" class="slide"><div>
+    <section>
+      <header>
+        <h2>The security model</h2>
+      </header>
+      <div class="middle">
+        <div class="container">
+          <div id="certified" class="circle">
+            Certified
+          </div>
+          <div id="priviledged" class="circle">
+            Priviledged
+          </div>
+          <div id="web" class="circle">
+            Web
+          </div>
+        </div>
+      </div>
+      <ul class="left">
+        <li>Certified: Mozilla only</li>
+        <li>Priviledged: Packaged and reviewed</li>
+        <li>Web: Everything else</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="offline" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Gap in best practices: offline</h2>
+      </header>
+      <img src="appimg/offline_gap.jpg" class="middle" />
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="offline_tools" class="slide"><div>
+    <section>
+      <header>
+        <h2>Offline toolbelt</h2>
+      </header>
+      <ul>
+        <li>localStorage</li>
+        <li>indexedDb</li>
+        <li>appcache</li>
+        <li>packaged apps (Part of webApps API)</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="appcache" class="slide"><div>
+    <section>
+      <pre>
+        <code>&lt;html manifest="example.appcache"&gt;</code>
+      </pre>
+      <pre>
+        <code>CACHE MANIFEST</code>
+        <code># 2010-06-18:v2</code>
+        <code>CACHE:</code>
+        <code>index.html</code>
+        <code>scripts/main.js</code>
+        <code>NETWORK:</code>
+        <code>/myapi</code>
+        <code>FALLBACK:</code>
+        <code>*.html /offline.html</code>
+      </pre>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="package" class="slide"><div>
+    <section>
+      <header>
+        <h2>Packaging webapps</h2>
+      </header>
+      <ol>
+        <li>Zip the resources (including the manifest.webapp)</li>
+        <li>Create an external mini-manifest called package.webapp</li>
+        <li>Install the app with navigator.mozApps.installPackage(url-to-mini-manifest)</li>
+      </ol>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+
+  <div id="sum_up" class="slide"><div>
+    <section>
+      <header>
+        <h2>In total</h2>
+      </header>
+      <ul>
+        <li>Mozilla is bringing mobile to the web</li>
+        <li>Leverage existing tools when developing</li>
+        <li>Remember to gracefully handle connectivity</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <!--<div class="progress"><div></div></div>-->
+  <!-- 
+    ^ don't like a progress bar? just delete this DIV
+  -->
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>

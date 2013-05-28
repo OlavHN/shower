@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en-US" class="fade">
+<!-- 
+  ^ You can control a few things with the <html> element's classes:
+
+  "fade"      - smooth fade between slides
+  "nonumbers" - remove the slide numbering after the progress bar
+-->
+
+<head>
+  <title>Firefox OS - User experience & design guidelines</title>
+  <!-- 
+    ^ Don't forget a good title - they show up as bookmarks and in Google 
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1274, user-scalable=no">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+    /* Add your own styles here */
+    .byline {
+      font-size: 30px;
+    }
+
+    .container {
+      position:relative;
+    }
+    .circle {
+      width: 200px;
+      height: 130px;
+      border-radius: 100px;
+      text-align: center;
+      padding-top: 70px;
+      position:absolute;
+    }
+    #gaia {
+      top: -120px;
+      background-color:rgba(255,0,0,0.5);
+    }
+    #gecko {
+      left:-60px;
+      background-color:rgba(0,255,0,0.5);
+    }
+    #gonk {
+      left:60px;
+      background-color:rgba(0,0,255,0.5);
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>Firefox OS - What, why and how</h1>
+    <p class="footer">Olav Nymoen <a href="mailto:olav@comoyo.com">olav@comoyo.com</a></p>
+  </header>
+
+<!-- 
+  The following is a slide, it needs a class of "slide" and it doesn't 
+  hurt to keep the right semantic elements in there, too.
+  IMPORTANT: each slide needs its own unique ID - this will become its
+  URL and this is how this slide system works!
+-->
+
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS - What, why and how</h2>
+      </header>
+      <ul>
+        <li>What is Firefox OS</li>
+        <li>Why make it?</li>
+        <li>Great .. But how is it possible!?</li>
+      </ul>
+      <small class="byline">
+        Olav Nymoen, Comoyo
+      </small>
+    <footer class="notes">
+Olav
+Comoyo - Playground for figuring out what Telenor can do on the Internet
+Jan
+My talk
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webphone" class="slide cover h"><div>
+    <section>
+      <header>
+        <h2>The smartphone website</h2>
+      </header>
+      <img src="introimg/phone_inception.jpg">
+      <footer class="notes">
+Whenever something was impossible to do with webtechnologies, mozilla extended the browser - Making it possible.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webstack" class="slide cover h"><div>
+    <section>
+      <header>
+      </header>
+      <video src="introvid/intro.mp4" autoplay loop />
+      <footer class="notes">
+Not hosted, just built with web technologies. The same you use to build websites. HTML, CSS, javascript.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="ffosstack" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS in detail</h2>
+      </header>
+      <div class="middle">
+        <div class="container">
+          <div id="gaia" class="circle">
+            Gaia
+          </div>
+          <div id="gecko" class="circle">
+            Gecko
+          </div>
+          <div id="gonk" class="circle">
+            Gonk
+          </div>
+        </div>
+      </div>
+      <footer class="notes">
+  - Gonk, the linux kernel
+  - Gecko, the same old browser
+  - Gaia, the website phone
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="gecko_webapi" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Gecko and the impossible: webAPIs</h2>
+      </header>
+      <img src="introimg/webapi.png"/>
+      <footer class="notes">
+APIs for offline, telephony, payment, applications and a security model
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="why" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>Why Firefox OS?</h2>
+      </header>
+      <footer class="notes">
+Why go through with all this trouble of making Firefox OS when we have iPhones and androids?
+      </footer>
+    </section>
+  </div></div> 
+
+  <div id="webapi_prototype" class="slide"><div>
+    <section>
+      <header>
+        <h2>webAPIs: Prototypes for the mobile web</h2>
+      </header>
+      <img src="introimg/sketch.gif" width="350" class="right"/>
+      <footer class="notes">
+This is how the innovation happens on the web. Google decides what goes into Andoird, Apple on iOS. The web is different.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="silos" class="slide"><div>
+    <section>
+      <header>
+        <h2>Silos vs An open ecosystem</h2>
+      </header>
+      <img src="introimg/webgl.jpg" width="350" class="left"/>
+      <img src="introimg/webrtc.png" width="350" class="right"/>
+      <footer class="notes">
+Noone controls the web. When someone (like Mozilla) has an idea, they implement it as a prototype and propose it for standardization
+If the prototype becomes popular, the browser vendors and others collaborate on a standard that everyone can implement
+webRTC is a complex beast that makes it possible for browsers to communicate directly. Google prototyped and proposed it. Others are now implementing it.
+If someone doesn't like the proposal, like how Microsoft is afraid of webGL, they can either unwillingly implement it or have a browser that is worse than the rest.
+This is innovation on the web. Everyone innovating and everyone collaborating. That is what the webAPIs are all about. Moving the web to mobile.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="how" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>How are we making Firefox OS?</h2>
+      </header>
+      <footer class="notes">
+Of course, while this sounds great and idealistic in theory, how is this actually going to happen?
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="bottom" class="slide"><div>
+    <section>
+      <header>
+        <h2>Start at the bottom</h2>
+      </header>
+      <img src="introimg/world.jpg" width="700" class="middle" />
+      <footer class="notes">
+There is something called the Ubuntu Phone. A brand new phone that builds on ubuntu and competes with high end Andoird and iPhone. Sexy stuff, but iPhone sexy?
+Mozilla realizes Apple has a few years on them, so initialy they target the two billion people that is using fragmented, broken andoirds, feature phones or no phone at all today.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="operators" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>We're helping Mozilla making it happeni!</h2>
+      </header>
+      <img src="introimg/partners.jpg"/>
+      <footer class="notes">
+Mobile operators like Telenor, Telefonica and others are helping Mozilla reach these people. Starting this summer.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="javascript" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>Javascript, REALLY?</h2>
+      </header>
+      <img src="introimg/comoyo.png"/>
+      <!--<video autoplay loop src="videos/cancel_confirm.mp4" width="400" class="middle"></video>-->
+      <footer class="notes">
+Might be hard to imagine this web phone competing with native mobile apps, but think about the desktop.
+Before I only read newspapers and checked the weather on the web.
+Today I read all my email, write all my documents and even watch TV in the browser.
+Today the browser is the best development environment on desktop for nearly every type of application and why should mobile be any different?
+
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="competition" class="slide"><div>
+    <section>
+      <header>
+        <h2>Useful Utility Competition</h2>
+      </header>
+      <img src="introimg/compo.png" height="400" class="right" />
+      <!--<video autoplay loop src="videos/cancel_confirm.mp4" width="400" class="middle"></video>-->
+      <footer class="notes">
+We brought a bunch og geekphones up here yesterday - flashed with the latest build and it has improved a lot just in the last month. Next month it's going to be better, and then even better .. Some day it'll catch up and beat the native stuff.
+Join in with a utility! Developer preview phones to the brave and curious!
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="jan" class="slide cover h"><div>
+    <section>
+      <header>
+      </header>
+      <img src="introimg/jan.jpg" height="400" class="right" />
+      <!--<video autoplay loop src="videos/cancel_confirm.mp4" width="400" class="middle"></video>-->
+      <footer class="notes">
+We brought a bunch og geekphones up here yesterday - flashed with the latest build and it has improved a lot just in the last month. Next month it's going to be better, and then even better .. Some day it'll catch up and beat the native stuff.
+Join in with a utility! Developer preview phones to the brave and curious!
+      </footer>
+    </section>
+  </div></div>
+
+  <!--<div class="progress"><div></div></div>-->
+  <!-- 
+    ^ don't like a progress bar? just delete this DIV
+  -->
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
