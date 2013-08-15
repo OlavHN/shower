@@ -5,12 +5,9 @@
 		progress = document.querySelector('div.progress div'),
 		slideList = [],
 		l = slides.length, i;
-<<<<<<< HEAD
 	if (typeof keysalive === 'undefined') {
 		keysalive = true;
 	}
-=======
->>>>>>> b5b8279bcb876b6c3602b0ef7ae425d81a815e6e
 
 	for (i = 0; i < l; i++) {
 		slideList.push({
@@ -18,10 +15,6 @@
 			hasInnerNavigation: null !== slides[i].querySelector('.inner')
 		});
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> b5b8279bcb876b6c3602b0ef7ae425d81a815e6e
 	function getTransform() {
 		var denominator = Math.max(
 			body.clientWidth / window.innerWidth,
@@ -67,11 +60,7 @@
 
 		var currentSlide = document.getElementById(slideList[slideNumber].id);
 
-<<<<<<< HEAD
 		if (null !== currentSlide) {
-=======
-		if (null != currentSlide) {
->>>>>>> b5b8279bcb876b6c3602b0ef7ae425d81a815e6e
 			window.scrollTo(0, currentSlide.offsetTop);
 		}
 	}
@@ -101,18 +90,11 @@
 
 	function goToSlide(slideNumber) {
 		url.hash = getSlideHash(slideNumber);
-<<<<<<< HEAD
 		lognotes(slideNumber);
 		if (!isListMode()) {
 			updateProgress(slideNumber);
 		}
 
-=======
-
-		if (!isListMode()) {
-			updateProgress(slideNumber);
-		}
->>>>>>> b5b8279bcb876b6c3602b0ef7ae425d81a815e6e
 	}
 
 	function getContainingSlideId(el) {
@@ -160,7 +142,6 @@
 		}
 	}
 
-<<<<<<< HEAD
 	function lognotes(slideNumber) {
 		if (window.console && slideList[slideNumber]) {
 			var notes = document.querySelector('#' +slideList[slideNumber].id + ' .notes');
@@ -177,8 +158,6 @@
 		}
 	}
 
-=======
->>>>>>> b5b8279bcb876b6c3602b0ef7ae425d81a815e6e
 	// Event handlers
 
 	window.addEventListener('DOMContentLoaded', function () {
@@ -209,10 +188,7 @@
 	}, false);
 
 	document.addEventListener('keydown', function (e) {
-<<<<<<< HEAD
 		if (!keysalive) { return; }
-=======
->>>>>>> b5b8279bcb876b6c3602b0ef7ae425d81a815e6e
 		// Shortcut for alt, shift and meta keys
 		if (e.altKey || e.ctrlKey || e.metaKey) { return; }
 

@@ -13,7 +13,7 @@ BODY {
 	counter-reset:paging;
 	}
 
-/*body:after {
+body:after {
 	position:absolute;
 	top:0;
 	right:10px;
@@ -22,7 +22,7 @@ BODY {
 	background:url(../images/tab-2.png);
 	content:'';
 	}
-*/
+
 
 /* Slide
 ---------------------------------------- */
