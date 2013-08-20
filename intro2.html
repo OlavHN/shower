@@ -44,6 +44,10 @@
       left:60px;
       background-color:rgba(0,0,255,0.5);
     }
+
+    #sandbox {
+      display: none;
+    }
   </style>
 </head>
 <body class="list">
@@ -172,8 +176,11 @@ Still, the web is improving at an amazing pace. With the introduction of Evergre
       <header>
         <h2>Open innovation</h2>
       </header>
-      <img src="introimg/webgl.jpg" width="350" class="left"/>
-      <img src="introimg/webrtc.png" width="350" class="right"/>
+      <iframe src="http://www.gooengine.com/demofiles/pearl-boy/index.html" width="350" height="350" class="left"></iframe>
+      <iframe src="https://appear.in/demo" width="350" height="350" class="right"></iframe>
+      <small class="credits right">appear.in/demo</small>
+      <!--<img src="introimg/webgl.jpg" width="350" class="left"/>
+      <img src="introimg/webrtc.png" width="350" class="right"/>-->
       <footer class="notes">
 Today we're seeing new technologoes like webGL and webRTC
       </footer>
@@ -185,7 +192,8 @@ Today we're seeing new technologoes like webGL and webRTC
       <header>
         <h2>Tomorrows innovations</h2>
       </header>
-      <img src="images/webcomponents.png" class="middle" />
+      <img id="components" src="images/webcomponents.png" class="middle" />
+      <!--<iframe id="sandbox" src="http://www.polymer-project.org/tools/sandbox/" width="800" height="400"></iframe>-->
       <footer class="notes">
 in the near future we'll see things like webcomponents and proper mobile integration. Because noone fully controls the web everyone is innovating. Google is doing webcomponents, Mozilla is going mobile and Microsoft is doing DRM - all in parallell! The innovations that succeed,  are standardized and become first class citizens are the technologies that become popular, the technolgies that people use. Take webGL for example, Microsoft are big on gaming so they didn't really want enable great gaming experiences on the web, yet as webGL came to all the other browsers Microsoft was forced to start working on it themselves or risk having an inferior browser. It's a great way of managing an ecosystem in the open!
       </footer>
@@ -267,6 +275,18 @@ At Telenor we're really exited about the web as a platform. It would allow us to
     </section>
   </div></div>
 
+  <div id="speech" class="slide"><div>
+    <section>
+      <header>
+      </header>
+      <figure class="frame swing middle" height="300" width="400">
+        <iframe src="speech/live.html" height="300" width="400"></iframe>
+      </frame>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
   <!--<div id="jan" class="slide cover h"><div>
     <section>
       <header>
@@ -282,6 +302,21 @@ At Telenor we're really exited about the web as a platform. It would allow us to
     ^ don't like a progress bar? just delete this DIV
   -->
   <script src="scripts/script.js"></script>
+  <script>
+    var components = document.getElementById('components');
+    components.addEventListener('click', function() {
+      console.log('clicked');
+      components.style.display = 'none';
+
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('src', 'http://www.polymer-project.org/tools/sandbox/');
+      iframe.style.height = 400 + 'px';
+      iframe.style.width = 800 + 'px';
+      document.getElementById('components').parentNode.appendChild(iframe);
+    });
+    
+  </script>
+
   <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
 </body>
 </html>
