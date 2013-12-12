@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="en-US" class="fade">
+<!--
+  ^ You can control a few things with the <html> element's classes:
+
+  "fade"      - smooth fade between slides
+  "nonumbers" - remove the slide numbering after the progress bar
+-->
+
+<head>
+  <title>Firefox OS - User experience & design guidelines</title>
+  <!--
+    ^ Don't forget a good title - they show up as bookmarks and in Google
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1274, user-scalable=no">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+    /* Add your own styles here */
+    .byline {
+      font-size: 30px;
+    }
+
+    .container {
+      position:relative;
+    }
+    .circle {
+      width: 200px;
+      height: 130px;
+      border-radius: 100px;
+      text-align: center;
+      padding-top: 70px;
+      position:absolute;
+    }
+    #gaia {
+      top: -120px;
+      background-color:rgba(255,0,0,0.5);
+    }
+    #gecko {
+      left:-60px;
+      background-color:rgba(0,255,0,0.5);
+    }
+    #gonk {
+      left:60px;
+      background-color:rgba(0,0,255,0.5);
+    }
+
+    #sandbox {
+      display: none;
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>Firefox OS</h1>
+    <p class="footer">Olav Nymoen <a href="mailto:olav@comoyo.com">olav@comoyo.com</a></p>
+    <button id="fullscreen">Fullscreen</button>
+  </header>
+
+<!--
+  The following is a slide, it needs a class of "slide" and it doesn't
+  hurt to keep the right semantic elements in there, too.
+  IMPORTANT: each slide needs its own unique ID - this will become its
+  URL and this is how this slide system works!
+-->
+
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS</h2>
+      </header>
+      <div>
+        Why the mobile web is so important
+      </div>
+      <small class="byline">
+        olavhn.github.io/shower/ysummit.html <br />
+        Olav Nymoen, Comoyo
+      </small>
+    <footer class="notes">
+Olav
+Comoyo - Playground for figuring out what Telenor can do on the Internet
+Jan
+My talk
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="telenor_youth" class="slide cover w"><div>
+    <section>
+      <img src="images/ysummit.jpg">
+      <footer class="notes">
+Whenever something was impossible to do with webtechnologies, mozilla extended the browser - Making it possible.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="locked_phone" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+      <img src="images/locked_smartphone.jpg">
+      <footer class="notes">
+Once upon a time Microsoft was following their Embrance, extend, extinguish approach
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="fxos" class="slide cover h"><div>
+    <section>
+      <header>
+      </header>
+      <img src="images/FxOS_big.jpg" />
+      <footer class="notes">
+At one point Netscape gave in and Mozilla came out of the ashes as an open source initiative. They reverseengineered Microsofts extensions and managed to truly opened up the web.
+Once the web was standardized and people started caring about making standards compliant websites the web flourished. Today you can use most of your services in the same way no matter what operating system you're using or no matter what browser, because the services are built with standard web technologies.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="silos" class="slide cover h"><div>
+    <section>
+      <header>
+      </header>
+      <img src="images/AppleVGoogle.jpg" />
+      <footer class="notes">
+Today we see similar problems on mobile. Apps are built for closed ecosystems and a few companies have a lot of control in how these ecosystems evolve. Its true that smartphones have browsers, but the browsers are just minified desktop browsers. They can't utilize the phone the way native apps can.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="browsers" class="slide cover w"><div>
+    <section>
+      <header>
+      <header>
+      <img src="images/evergreen.png" />
+      <footer class="notes">
+Still, the web is improving at an amazing pace. With the introduction of Evergreen browsers, browsers that autoupdate themselves, more users are up to date with the latest and greatest standards so the standards can improve rapidly.
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webapis" class="slide cover w"><div>
+    <section>
+      <header>
+        <h2>developer.mozilla.org/WebAPI</h2>
+      </header>
+      <img src="introimg/webapi.png"/>
+      <!--<video autoplay loop src="videos/cancel_confirm.mp4" width="400" class="middle"></video>-->
+      <footer class="notes">
+That is Firefox OS. The final peice of the puzzle is the webAPIs. The web today isn't powerful enough to make a true smartphone - telephony, SMS, app management, etc arn't part of the web. Instead of hacking these things in, Mozilla is promoting a new set of APIs, nicknamed the webAPIs, to give the web access to the phone. Just like the popularity of webGL forced it into all browsers, the success of Firefox OS could lead to these webAPIs becoming part of other browsers aswell, and that is the true goal of Mozilla with Firefox OS.
+
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="nextbillion" class="slide cover w"><div>
+    <section>
+      <header>
+      </header>
+      <img src="images/nextbillion.jpg"/>
+      <!--<video autoplay loop src="videos/cancel_confirm.mp4" width="400" class="middle"></video>-->
+      <footer class="notes">
+While apple is making 500 EUR phones and Google is intensely competing in the high end market, Firefox OS has been designed from the bottom to work really well on cheap hardware. By targeting the users that doesn't have a smartphone today, but could afford a low end one Firefox OS has a market of two billion potential users. By going for these users first Firefox OS doesn't need to compete head to head with the iPhone and brand new Android devices on first release, which is good.
+      </footer>
+    </section>
+  </div></div>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

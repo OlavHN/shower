@@ -55,6 +55,7 @@
   <header class="caption">
     <h1>Firefox OS - What, why and how</h1>
     <p class="footer">Olav Nymoen <a href="mailto:olav@comoyo.com">olav@comoyo.com</a></p>
+    <button id="fullscreen">Fullscreen</button>
   </header>
 
 <!--
@@ -321,12 +322,36 @@ At Telenor we're really exited about the web as a platform. It would allow us to
       components.style.display = 'none';
 
       var iframe = document.createElement('iframe');
-      iframe.setAttribute('src', 'http://www.polymer-project.org/tools/sandbox/');
+      iframe.setAttribute('src', 'http://appmaker.mozillalabs.com/');
       iframe.style.height = 450 + 'px';
       iframe.style.width = 800 + 'px';
       document.getElementById('components').parentNode.appendChild(iframe);
     });
-    
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement &&    // alternative standard method
+          !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+          document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+        }
+      } else {
+        if (document.cancelFullScreen) {
+          document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+          document.webkitCancelFullScreen();
+        }
+      }
+    }
+
+    document.querySelector('#fullscreen').addEventListener('click', function() {
+      toggleFullScreen();
+    }, false);
   </script>
 
   <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
